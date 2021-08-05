@@ -1,5 +1,5 @@
 try:
-    from ._version import version as __version__
+    from ._version import __version__
 except ImportError:
     __version__ = "unknown"
 __author__ = "Ian Hunt-Isaak"
