@@ -6,7 +6,7 @@
 [![CI](https://github.com/ianhi/maybe-compute/workflows/ci/badge.svg)](https://github.com/ianhi/maybe-compute/actions)
 [![codecov](https://codecov.io/gh/ianhi/maybe-compute/branch/master/graph/badge.svg)](https://codecov.io/gh/ianhi/maybe-compute)
 
-to disk caching of computationally intensive functions. 
+to disk caching of computationally intensive functions.
 
 I think this may be a bad idea - probably don't use this. But if you want to then use it like this:
 

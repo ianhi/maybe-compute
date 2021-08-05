@@ -7,6 +7,7 @@ __email__ = "ianhuntisaak@gmail.com"
 
 from functools import wraps
 from pathlib import Path
+
 import xarray as xr
 
 _maybe_compute_path = Path(".")

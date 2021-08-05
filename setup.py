@@ -1,8 +1,9 @@
 from os import path
+
 import setuptools
 
 # extract version
-VERSION_PATH = path.realpath("mpl_interactions/_version.py")
+VERSION_PATH = path.realpath("maybe_compute/_version.py")
 version_ns = {}
 with open(VERSION_PATH, encoding="utf8") as STREAM:
     exec(STREAM.read(), {}, version_ns)
