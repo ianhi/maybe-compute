@@ -1,4 +1,5 @@
 from os import path
+
 import setuptools
 
 # extract version
