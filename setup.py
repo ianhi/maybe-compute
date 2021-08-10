@@ -1,5 +1,5 @@
-from typing import Dict
 from os import path
+from typing import Dict
 
 import setuptools
 
