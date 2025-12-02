@@ -6,10 +6,9 @@
 [![CI](https://github.com/ianhi/maybe-compute/workflows/ci/badge.svg)](https://github.com/ianhi/maybe-compute/actions)
 [![codecov](https://codecov.io/gh/ianhi/maybe-compute/branch/master/graph/badge.svg)](https://codecov.io/gh/ianhi/maybe-compute)
 
-to disk caching of computationally intensive functions.
+To disk caching of computationally intensive functions.
 
-I think this may be a bad idea - probably don't use this. But if you want to then use it like this:
-
+## Usage
 
 ```python
 from maybe_compute import maybe_compute, set_maybe_compute_folder
@@ -27,6 +26,8 @@ maybe_compute(dataset_maker,  'yikes.nc')(4,5)
 
 ## Install
 
+I strongly recommend pinning to a known version as the API may change dramatically until version 1.0 is published.
+
 ```bash
-pip install git+https://github.com/ianhi/maybe-compute
+pip install maybe-compute==0.1.0
 ```
