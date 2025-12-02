@@ -5,10 +5,7 @@ on:
     branches:
       - master
       - main
-    tags:
-      - "v*"
   pull_request: {}
-  workflow_dispatch:
 
 jobs:
   test:
@@ -28,28 +25,3 @@ jobs:
 
       - name: Test with pytest
         run: pytest
-
-  deploy:
-    needs: test
-    if: success() && startsWith(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-    environment: pypi
-    permissions:
-      id-token: write
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v4
-
-      - name: Build package
-        run: uv build
-
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
