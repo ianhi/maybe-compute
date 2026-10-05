@@ -15,13 +15,16 @@ from maybe_compute import maybe_compute, set_maybe_compute_folder
 import xarray as xr
 import numpy as np
 
+
 def dataset_maker(a, b):
     "this docstring shows thanks to functools.wraps!"
-    return xr.Dataset({"images":xr.DataArray(np.random.randn(10,20)*a +b, dims=('a','b'))})
+    return xr.Dataset(
+        {"images": xr.DataArray(np.random.randn(10, 20) * a + b, dims=("a", "b"))}
+    )
 
-set_maybe_compute_folder('sign-flip-cartoon')
-maybe_compute(dataset_maker,  'yikes.nc')(4,5)
 
+set_maybe_compute_folder("sign-flip-cartoon")
+maybe_compute(dataset_maker, "yikes.nc")(4, 5)
 ```
 
 ## Install
